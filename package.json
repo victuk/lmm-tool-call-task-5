@@ -1,0 +1,16 @@
+{
+  "name": "tools-for-llm-task",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google/genai": "^2.15.0",
+    "dotenv": "^17.4.2"
+  }
+}
