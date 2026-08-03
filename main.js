@@ -107,7 +107,7 @@ async function runAgent() {
       const { id, name, args } = call;
       const fn = toolImplementations[name];
       const output = fn
-        ? fn(args || {})
+        ? await fn(args || {})
         : { error: `Function ${name} not found` };
 
       functionResponseParts.push({
@@ -120,10 +120,7 @@ async function runAgent() {
     }
 
     response = await chat.sendMessage({
-      message: {
-        role: "tool",
-        parts: functionResponseParts,
-      },
+      message: functionResponseParts,
     });
   }
 
