@@ -93,9 +93,9 @@ async function runAgent() {
 
   const chat = ai.chats.create({
     model: modelName,
-    maxOutputTokens: process.env.MAX_TOKENS || 2000,
     config: {
       tools: toolsDeclaration,
+      maxOutputTokens: process.env.MAX_TOKENS || 2000,
     },
   });
 
