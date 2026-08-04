@@ -128,4 +128,4 @@ async function runAgent() {
   console.log(response.text);
 }
 
-runAgent().catch(console.error);
+runAgent().catch((err) => {console.log(err)});
